@@ -1,0 +1,210 @@
+/* Đặt font và căn chỉnh cơ bản */
+::selection{
+    background: #FE589D;
+    color: #fff;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+    line-height: 1.6;
+    color: #1E003F;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    min-height: 60vh;
+    margin: 20px auto;
+    padding: 20px;
+    background: #FAE6EF;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Chào mừng trang */
+.welcom-wrap{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+.welcome{
+    text-align: center;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 5px 20px;
+    margin: 1px 10px;
+    margin-right: 5px;
+    background-color: #1E003F;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background-color: #F6D5E5;
+    text-decoration: none;
+    color: #1E003F ;
+    transition: 0.3s;
+}
+
+.welcome-link {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #1E003F;
+}
+
+.welcome-link:hover{
+    text-decoration: none;
+}
+
+/* Tiêu đề */
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1E003F;
+}
+
+/* Bảng */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+    padding-right: 24px;
+}
+
+table th {
+    background-color: #1E003F;
+    color: white;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+table tr:hover {
+    background-color: #1E003F;
+    color:#F6D5E5;
+    transition: 0.2s;
+}
+
+.footer{
+    text-align: right;
+    margin-top: 50px;
+}
+
+/* Form */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Liên kết */
+a {
+    display: inline-block;
+    margin: 10px 0;
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Alert */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+
+.search{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 528px;
+
+}
+
+.search input{
+    border-radius: 20px;
+}
+
+.search a{
+    margin-bottom: 16px;
+}

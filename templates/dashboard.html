@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome, {{ username }}!</h1>
+        <h2>Your saved passwords:</h2>
+        <form class="search" method="POST">
+            <input type="text" name="search" placeholder="Tìm kiếm tài khoản" value="{{ request.form.get('search', '') }}">
+            <a class="button" type="submit">Search</a>
+        </form>
+        
+        <table>
+            <tr>
+                <th>Tài Khoản</th>
+                <th>Mật khẩu đã mã hóa</th>
+                <th></th>
+            </tr>
+            {% for password in passwords %}
+            <tr>
+                <td>{{ password[1] }}</td>
+                <td>{{ password[2] }}</td>
+                <td>
+                    <form action="{{ url_for('delete_password', password_id=password[0]) }}" method="POST">
+                        <button class="button" type="submit" onclick="return confirm('Are you sure you want to delete this password?')">Xóa</button>
+                    </form>
+                    <form action="">
+                        <div><button class="button" href="{{ url_for('edit_password', password_id=password[0]) }}">Sửa</button></div>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        
+        
+        <div class="footer">
+            <a class="button" href="{{ url_for('add_password') }}">Thêm mật khẩu</a>
+            <a class="button" href="{{ url_for('logout') }}">Đăng xuất</a>
+        </div>
+        <a class="button" href="#" class="delete-account"
+            onclick="if(confirm('Are you sure you want to delete your account?')){document.getElementById('delete-account-form').submit();}">Xóa tài khoản
+            Account</a>
+
+        <form id="delete-account-form" action="{{ url_for('delete_account') }}" method="POST" style="display: none;">
+            <!-- Form này sẽ được submit khi người dùng xác nhận -->
+        </form>
+    </div>
+</body>
+
+</html>

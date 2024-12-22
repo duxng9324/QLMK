@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome to Password Manager{% endblock %}
+
+{% block content %}
+<div class="welcom-wrap">
+    <div>
+        <h1>Welcome to the Password Manager</h1>
+        <p class="welcome">Chương trình quản lý mật khẩu nhóm 5.</p>
+        <div class="buttons-container">
+            <a href="{{ url_for('register') }}" class="button">Register</a>
+            <a href="{{ url_for('login') }}" class="button">Login</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
