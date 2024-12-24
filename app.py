@@ -119,7 +119,6 @@ def login():
             flash("Username not found.", "danger")
     return render_template("login.html", form=form)
 
-@app.route("/dashboard")
 @app.route("/dashboard", methods=["GET", "POST"])
 def dashboard():
     if "username" not in session:
@@ -241,6 +240,7 @@ def edit_password(password_id):
         return redirect(url_for("dashboard"))
 
     return render_template("edit_password.html", password=password)
+
 
 
 
